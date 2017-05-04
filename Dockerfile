@@ -25,17 +25,20 @@ RUN apt-get install -y \
 
 RUN apt-get -qq update
 RUN apt-get -qq install -y dirmngr patch make 
-RUN apt-get -qq install -y libsqlite3-dev libpq-dev libmysqlclient-dev libxslt-dev 
+RUN apt-get -qq install -y libsqlite3-dev libmysqlclient-dev libxslt-dev 
 RUN apt-get -qq install -y gcc curl wget libxml2-dev 
-#RUN apt-get -qq install -y libmysqlclient20 
-RUN apt-get -qq install -y sudo ca-certificates build-essential 
+RUN apt-get -qq install -y sudo ca-certificates  
 RUN apt-get -qq install -y graphicsmagick-libmagick-dev-compat libpq5 
 RUN apt-get -qq install -y libsqlite3-0 bzr git mercurial openssh-client bzip2 gawk g++ 
 RUN apt-get -qq install -y libssl-dev libc6-dev zlib1g-dev libyaml-dev sqlite3 
 RUN apt-get -qq install -y autoconf libgmp-dev libgdbm-dev libncurses5-dev automake 
 RUN apt-get -qq install -y libtool bison pkg-config libffi-dev libreadline6-dev
 RUN apt-get -qq install -y imagemagick libmagickcore-dev libmagickwand-dev libmagick++-dev
-RUN apt-get -y -q install libcurl3 libxml2 libxslt1-dev libcurl4-gnutls-dev git-core mysql-client memcached
+RUN apt-get -y -qq install libcurl3 libxml2 libxslt1-dev libcurl4-gnutls-dev git-core mysql-client memcached
+#------------------------------------------
+# Dependências da gem ruby-oci8 -v 1.0.2
+RUN apt-get -y -qq install build-essential libpq-dev libaio1 unzip
+#------------------------------------------
 
 # Build Ruby
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -q install zlib1g zlib1g-dev wget libyaml-dev bison libssl-dev libreadline6-dev autoconf subversion curl
