@@ -85,7 +85,7 @@ RUN gem install --no-rdoc --no-ri cgi_multipart_eof_fix -v 2.5.0
 RUN gem install --no-rdoc --no-ri choice -v 0.1.4
 RUN gem install --no-rdoc --no-ri fastercsv -v 1.5.4
 RUN gem install --no-rdoc --no-ri gem_plugin -v 0.2.3
-RUN gem install --no-rdoc --no-ri gruff -v 0.3.7
+#RUN gem install --no-rdoc --no-ri gruff -v 0.3.7
 RUN gem install --no-rdoc --no-ri hashery -v 2.1.0
 RUN gem install --no-rdoc --no-ri htmldoc -v 0.2.3
 RUN gem install --no-rdoc --no-ri log4r -v 1.1.9
@@ -140,6 +140,14 @@ RUN git clone https://github.com/roo-rb/roo.git /usr/local/lib/ruby/gems/1.8/gem
 WORKDIR /usr/local/lib/ruby/gems/1.8/gems/roo-1.10.3
 RUN git checkout v1.10.3
 RUN cp /usr/local/lib/ruby/gems/1.8/gems/roo-1.10.3/roo.gemspec /usr/local/lib/ruby/gems/1.8/specifications/roo.gemspec
+
+#------------------------------------------
+# Instalação de gem gruff -v 1.10.3 * MODIFIED: CUSTOMIZED FOR SPECIFIC APP
+# For more info check: https://github.com/betonix/gruff
+#------------------------------------------
+
+RUN git clone https://github.com/betonix/gruff.git /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7
+RUN cp /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7/gruff.gemspec /usr/local/lib/ruby/gems/1.8/specifications/gruff.gemspec
 
 #------------------------------------------
 # Instalação de gem ruby-oci8 -v 1.0.2
