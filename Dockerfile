@@ -146,8 +146,8 @@ RUN cp /usr/local/lib/ruby/gems/1.8/gems/roo-1.10.3/roo.gemspec /usr/local/lib/r
 # For more info check: https://github.com/betonix/gruff
 #------------------------------------------
 
-RUN rm -rf /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7/*
-RUN git clone https://github.com/betonix/gruff.git /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7
+#RUN rm -rf /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7/*
+#RUN git clone https://github.com/betonix/gruff.git /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7
 #RUN ls -l /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7
 #RUN cp /usr/local/lib/ruby/gems/1.8/gems/gruff-0.3.7/gruff.gemspec /usr/local/lib/ruby/gems/1.8/specifications/gruff.gemspec
 
