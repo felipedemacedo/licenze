@@ -184,7 +184,10 @@ RUN gem list
 # Instalação do java
 #------------------------------------------
 
-RUN apt-get install -y default-jre
+RUN apt-get install software-properties-common -y
+RUN apt-add-repository ppa:webupd8team/java
+RUN apt-get update
+RUN apt-get install oracle-java8-installer -y
 RUN java -version
 
 WORKDIR /
